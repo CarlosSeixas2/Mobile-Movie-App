@@ -64,16 +64,18 @@ export default function Layout() {
           ),
         }}
       />
+
       <Tabs.Screen
-        name="profile"
+        name="search"
         options={{
           headerShown: false,
-          title: "Profile",
+          title: "Search",
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} icon={icons.person} label="Profile" />
+            <TabIcon focused={focused} icon={icons.search} label="Search" />
           ),
         }}
       />
+
       <Tabs.Screen
         name="saved"
         options={{
@@ -84,13 +86,14 @@ export default function Layout() {
           ),
         }}
       />
+
       <Tabs.Screen
-        name="search"
+        name="profile"
         options={{
           headerShown: false,
-          title: "Search",
+          title: "Profile",
           tabBarIcon: ({ focused }) => (
-            <TabIcon focused={focused} icon={icons.search} label="Search" />
+            <TabIcon focused={focused} icon={icons.person} label="Profile" />
           ),
         }}
       />
