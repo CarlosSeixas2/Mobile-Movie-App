@@ -51,12 +51,12 @@ export default function Index() {
               OnPress={() => {
                 router.push("/search");
               }}
-              placeholder="Search for a movie"
+              placeholder="Pesquisar um filme"
             />
 
             <>
               <Text className="text-lg text-white font-bold mt-5 mb-3">
-                Latest Movies
+                Últimos filmes
               </Text>
 
               <FlatList
