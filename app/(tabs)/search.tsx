@@ -20,18 +20,22 @@ const Search = () => {
   } = useFetch(() => fetchPopularMovies({ query: searchQuery }), false);
 
   useEffect(() => {
-    updateSearchCount(searchQuery, movies[0]);
-
     const timeoutId = setTimeout(async () => {
       if (searchQuery.trim() || searchQuery == "") {
         await loadMovies();
       } else {
         reset();
       }
-    }, 500);
+    }, 1000);
 
     return () => clearInterval(timeoutId);
   }, [searchQuery]);
+
+  useEffect(() => {
+    if (movies?.length > 0 && movies?.[0] && searchQuery !== "") {
+      updateSearchCount(searchQuery, movies[0]);
+    }
+  }, [movies]);
 
   return (
     <View className="flex-1 bg-primary">
